@@ -12,19 +12,19 @@ namespace RetroGames.Utility {
         }
 
         public Task SendEmailAsync(string email, string subject, string htmlMessage) {
-            //logic to send email
+			//logic to send email
 
-            var client = new SendGridClient(SendGridSecret);
+			//var client = new SendGridClient(SendGridSecret);
 
-            // TODO
-            var from = new EmailAddress("hello@dotnetmastery.com", "RetroGames");
-            var to = new EmailAddress(email);
-            var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
+			//// TODO
+			//var from = new EmailAddress("", "RetroGames");
+			//var to = new EmailAddress(email);
+			//var message = MailHelper.CreateSingleEmail(from, to, subject, "", htmlMessage);
 
-            return client.SendEmailAsync(message);
+			//return client.SendEmailAsync(message);
 
-
-        }
+			return Task.CompletedTask;
+		}
     }
 }
 
