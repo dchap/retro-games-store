@@ -15,12 +15,12 @@ namespace RetroGamesWeb.Areas.Customer.Controllers {
     public class CartController : Controller {
 
         private readonly IUnitOfWork _unitOfWork;
-        //private readonly IEmailSender _emailSender;
+        private readonly IEmailSender _emailSender;
         [BindProperty]
         public ShoppingCartVM ShoppingCartVM { get; set; }
-        public CartController(IUnitOfWork unitOfWork/*, IEmailSender emailSender*/) {
+        public CartController(IUnitOfWork unitOfWork, IEmailSender emailSender) {
             _unitOfWork = unitOfWork;
-            //_emailSender = emailSender;
+            _emailSender = emailSender;
         }
 
 
